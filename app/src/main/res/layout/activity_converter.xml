@@ -1,0 +1,310 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ConverterActivity">
+
+    <TextView
+        android:id="@+id/tv_title_converter"
+        style="@style/tv_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/red" />
+
+    <TextView
+        android:id="@+id/tv_description_converter"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="16dp"
+        android:text="O resultado da conversão é:"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tv_title_converter" />
+
+    <TextView
+        android:id="@+id/tv_result_converter"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="16dp"
+        android:text="0.0"
+        android:textSize="30sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tv_description_converter" />
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/til_weight"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="16dp"
+        app:hintEnabled="false"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tv_result_converter">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/tie_weight"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/custom_input"
+            android:drawableStart="@drawable/ic_weight"
+            android:drawablePadding="16dp"
+            android:textStyle="bold"
+            android:hint="Peso"
+            android:inputType="numberDecimal"
+            android:textSize="20sp" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <TextView
+        android:id="@+id/tv_weight_input"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="16dp"
+        android:text="Medida de entrada"
+        app:layout_constraintStart_toStartOf="@id/til_weight"
+        app:layout_constraintTop_toBottomOf="@id/til_weight" />
+
+    <TextView
+        android:id="@+id/tv_weight_exit"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="16dp"
+        android:text="Medida de saída"
+        app:layout_constraintEnd_toEndOf="@id/til_weight"
+        app:layout_constraintStart_toEndOf="@id/tv_weight_input"
+        app:layout_constraintTop_toBottomOf="@id/til_weight" />
+
+    <Spinner
+        android:id="@+id/spinner_weight_input"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        app:layout_constraintStart_toStartOf="@id/tv_weight_input"
+        app:layout_constraintTop_toBottomOf="@id/tv_weight_input" />
+
+    <Spinner
+        android:id="@+id/spinner_weight_exit"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        app:layout_constraintStart_toStartOf="@id/tv_weight_exit"
+        app:layout_constraintTop_toBottomOf="@id/tv_weight_exit" />
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/til_distance"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginTop="8dp"
+        app:hintEnabled="false"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/spinner_weight_input">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/tie_distance"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/custom_input"
+            android:drawableStart="@drawable/ic_length"
+            android:drawablePadding="16dp"
+            android:textStyle="bold"
+            android:hint="Comprimento"
+            android:inputType="numberDecimal"
+            android:textSize="20sp" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <TextView
+        android:id="@+id/tv_distance_input"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="16dp"
+        android:text="Medida de entrada"
+        app:layout_constraintStart_toStartOf="@id/til_distance"
+        app:layout_constraintTop_toBottomOf="@id/til_distance" />
+
+    <TextView
+        android:id="@+id/tv_distance_exit"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="16dp"
+        android:text="Medida de saída"
+        app:layout_constraintEnd_toEndOf="@id/til_distance"
+        app:layout_constraintStart_toEndOf="@id/tv_distance_input"
+        app:layout_constraintTop_toBottomOf="@id/til_distance" />
+
+    <Spinner
+        android:id="@+id/spinner_distance_input"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        app:layout_constraintStart_toStartOf="@id/tv_distance_input"
+        app:layout_constraintTop_toBottomOf="@id/tv_distance_input" />
+
+    <Spinner
+        android:id="@+id/spinner_distance_exit"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        app:layout_constraintStart_toStartOf="@id/tv_distance_exit"
+        app:layout_constraintTop_toBottomOf="@id/tv_distance_exit" />
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/til_volume"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginTop="8dp"
+        app:hintEnabled="false"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/spinner_distance_input">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/tie_volume"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/custom_input"
+            android:drawableStart="@drawable/ic_liquid"
+            android:drawablePadding="16dp"
+            android:textStyle="bold"
+            android:hint="Volume"
+            android:inputType="numberDecimal"
+            android:textSize="20sp" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <TextView
+        android:id="@+id/tv_volume_input"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="16dp"
+        android:text="Medida de entrada"
+        app:layout_constraintStart_toStartOf="@id/til_volume"
+        app:layout_constraintTop_toBottomOf="@id/til_volume" />
+
+    <TextView
+        android:id="@+id/tv_volume_exit"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="16dp"
+        android:text="Medida de saída"
+        app:layout_constraintEnd_toEndOf="@id/til_volume"
+        app:layout_constraintStart_toEndOf="@id/tv_volume_input"
+        app:layout_constraintTop_toBottomOf="@id/til_volume" />
+
+    <Spinner
+        android:id="@+id/spinner_volume_input"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        app:layout_constraintStart_toStartOf="@id/tv_volume_input"
+        app:layout_constraintTop_toBottomOf="@id/tv_volume_input" />
+
+    <Spinner
+        android:id="@+id/spinner_volume_exit"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        app:layout_constraintStart_toStartOf="@id/tv_volume_exit"
+        app:layout_constraintTop_toBottomOf="@id/tv_volume_exit" />
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/til_temperature"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginTop="8dp"
+        app:hintEnabled="false"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/spinner_volume_input">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/tie_temperature"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/custom_input"
+            android:drawableStart="@drawable/ic_temperature"
+            android:drawablePadding="16dp"
+            android:textStyle="bold"
+            android:hint="Temperatura"
+            android:inputType="numberDecimal"
+            android:textSize="20sp" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <TextView
+        android:id="@+id/tv_temperature_input"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="16dp"
+        android:text="Medida de entrada"
+        app:layout_constraintStart_toStartOf="@id/til_temperature"
+        app:layout_constraintTop_toBottomOf="@id/til_temperature" />
+
+    <TextView
+        android:id="@+id/tv_temperature_exit"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="16dp"
+        android:text="Medida de saída"
+        app:layout_constraintEnd_toEndOf="@id/til_temperature"
+        app:layout_constraintStart_toEndOf="@id/tv_temperature_input"
+        app:layout_constraintTop_toBottomOf="@id/til_temperature" />
+
+    <Spinner
+        android:id="@+id/spinner_temperature_input"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        app:layout_constraintStart_toStartOf="@id/tv_temperature_input"
+        app:layout_constraintTop_toBottomOf="@id/tv_temperature_input" />
+
+    <Spinner
+        android:id="@+id/spinner_temperature_exit"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        app:layout_constraintStart_toStartOf="@id/tv_temperature_exit"
+        app:layout_constraintTop_toBottomOf="@id/tv_temperature_exit" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.5" />
+
+    <Button
+        android:id="@+id/btn_new_calculate"
+        style="@style/Widget.Material3.Button.OutlinedButton"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="16dp"
+        android:text="Novo Cálculo"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/guideline"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/btn_calculate"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="16dp"
+        android:text="Converter"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/guideline" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
