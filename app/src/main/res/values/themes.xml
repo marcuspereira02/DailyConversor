@@ -2,8 +2,18 @@
     <!-- Base application theme. -->
     <style name="Base.Theme.DailyConversor" parent="Theme.Material3.DayNight.NoActionBar">
         <!-- Customize your light theme here. -->
-        <!-- <item name="colorPrimary">@color/my_light_primary</item> -->
+    <item name="colorPrimary">@color/red</item>
     </style>
 
     <style name="Theme.DailyConversor" parent="Base.Theme.DailyConversor" />
+
+    <style name="tv_title" parent="Widget.AppCompat.TextView">
+        <item name="android:text">DailyConversor</item>
+        <item name="android:textSize">45sp</item>
+        <item name="android:textStyle">bold</item>
+        <item name="layout_constraintEnd_toEndOf">parent</item>
+        <item name="layout_constraintStart_toStartOf">parent</item>
+        <item name="layout_constraintTop_toTopOf">parent</item>
+        <item name="android:layout_marginTop">16dp</item>
+    </style>
 </resources>

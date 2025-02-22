@@ -1,3 +1,13 @@
 <resources>
     <string name="app_name">DailyConversor</string>
+
+    <string-array name="spinner_weight">
+        <item>Miligrama</item>
+        <item>Grama</item>
+        <item>Onça</item>
+        <item>Libra</item>
+        <item>Quilograma</item>
+        <item>Stone</item>
+        <item>Tonelada</item>
+    </string-array>
 </resources>
