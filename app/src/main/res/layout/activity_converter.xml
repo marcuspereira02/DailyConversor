@@ -68,9 +68,9 @@
         android:layout_height="wrap_content"
         android:layout_margin="16dp"
         android:text="Medida de entrada"
+        android:visibility="gone"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/til_weight"
-        android:visibility="gone"/>
+        app:layout_constraintTop_toBottomOf="@id/til_weight" />
 
     <TextView
         android:id="@+id/tv_weight_output"
@@ -79,19 +79,19 @@
         android:layout_marginStart="8dp"
         android:layout_marginTop="16dp"
         android:text="Medida de saída"
+        android:visibility="gone"
         app:layout_constraintStart_toStartOf="@+id/guideline"
-        app:layout_constraintTop_toBottomOf="@id/til_weight"
-        android:visibility="gone"/>
+        app:layout_constraintTop_toBottomOf="@id/til_weight" />
 
     <Spinner
         android:id="@+id/spinner_weight_input"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
         android:layout_marginTop="8dp"
         android:layout_marginEnd="8dp"
-        android:layout_marginStart="10dp"
-        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toStartOf="@id/guideline"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/tv_weight_input" />
 
     <Spinner
@@ -135,9 +135,9 @@
         android:layout_height="wrap_content"
         android:layout_margin="16dp"
         android:text="Medida de entrada"
+        android:visibility="gone"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/til_length"
-        android:visibility="gone"/>
+        app:layout_constraintTop_toBottomOf="@id/til_length" />
 
     <TextView
         android:id="@+id/tv_length_output"
@@ -146,17 +146,17 @@
         android:layout_marginStart="8dp"
         android:layout_marginTop="16dp"
         android:text="Medida de saída"
+        android:visibility="gone"
         app:layout_constraintStart_toStartOf="@+id/guideline"
-        app:layout_constraintTop_toBottomOf="@id/til_length"
-        android:visibility="gone"/>
+        app:layout_constraintTop_toBottomOf="@id/til_length" />
 
     <Spinner
         android:id="@+id/spinner_length_input"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
         android:layout_marginTop="8dp"
         android:layout_marginEnd="8dp"
-        android:layout_marginStart="10dp"
         app:layout_constraintEnd_toStartOf="@+id/guideline"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/tv_length_input" />
@@ -200,7 +200,6 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        android:padding="10dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/tv_result_converter">
@@ -237,9 +236,9 @@
         android:layout_height="wrap_content"
         android:layout_margin="16dp"
         android:text="Medida de entrada"
+        android:visibility="gone"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/til_volume"
-        android:visibility="gone"/>
+        app:layout_constraintTop_toBottomOf="@id/til_volume" />
 
     <TextView
         android:id="@+id/tv_volume_output"
@@ -248,17 +247,17 @@
         android:layout_marginStart="6dp"
         android:layout_marginTop="16dp"
         android:text="Medida de saída"
+        android:visibility="gone"
         app:layout_constraintStart_toStartOf="@+id/guideline"
-        app:layout_constraintTop_toBottomOf="@id/til_volume"
-        android:visibility="gone"/>
+        app:layout_constraintTop_toBottomOf="@id/til_volume" />
 
     <Spinner
         android:id="@+id/spinner_volume_input"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
         android:layout_marginTop="8dp"
         android:layout_marginEnd="8dp"
-        android:layout_marginStart="10dp"
         app:layout_constraintEnd_toStartOf="@+id/guideline"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/tv_volume_input" />
@@ -304,9 +303,9 @@
         android:layout_height="wrap_content"
         android:layout_margin="16dp"
         android:text="Medida de entrada"
+        android:visibility="gone"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/til_temperature"
-        android:visibility="gone"/>
+        app:layout_constraintTop_toBottomOf="@id/til_temperature" />
 
     <TextView
         android:id="@+id/tv_temperature_output"
@@ -315,16 +314,16 @@
         android:layout_marginStart="6dp"
         android:layout_marginTop="16dp"
         android:text="Medida de saída"
+        android:visibility="gone"
         app:layout_constraintStart_toStartOf="@+id/guideline"
-        app:layout_constraintTop_toBottomOf="@id/til_temperature"
-        android:visibility="gone"/>
+        app:layout_constraintTop_toBottomOf="@id/til_temperature" />
 
     <Spinner
         android:id="@+id/spinner_temperature_input"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginTop="8dp"
         android:layout_marginStart="10dp"
+        android:layout_marginTop="8dp"
         android:layout_marginEnd="8dp"
         app:layout_constraintEnd_toStartOf="@+id/guideline"
         app:layout_constraintStart_toStartOf="parent"
