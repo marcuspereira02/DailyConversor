@@ -2,12 +2,38 @@
     <string name="app_name">DailyConversor</string>
 
     <string-array name="spinner_weight">
-        <item>Miligrama</item>
-        <item>Grama</item>
-        <item>Onça</item>
-        <item>Libra</item>
-        <item>Quilograma</item>
-        <item>Stone</item>
-        <item>Tonelada</item>
+        <item>Miligrama (mg)</item>
+        <item>Grama (g)</item>
+        <item>Onça (oz)</item>
+        <item>Libra (lb)</item>
+        <item>Quilograma (kg)</item>
+        <item>Stone (st)</item>
+        <item>Tonelada (t)</item>
     </string-array>
+
+    <string-array name="spinner_temperature">
+        <item>Kelvin (K)</item>
+        <item>Celsius (°C)</item>
+        <item>Fahrenheit (°F)</item>
+    </string-array>
+
+    <string-array name="spinner_length">
+        <item>Milímetro (mm)</item>
+        <item>Centímetro (cm)</item>
+        <item>Metro (m)</item>
+        <item>Quilômetro (km)</item>
+        <item>Polegada (in)</item>
+        <item>Pé (ft)</item>
+        <item>Jarda (yd)</item>
+        <item>Milha (mi)</item>
+    </string-array>
+
+    <string-array name="spinner_volume">
+        <item>Mililitro (mL)</item>
+        <item>Litro (L)</item>
+        <item>Galão americano (gal US)</item>
+        <item>Galão imperial (gal UK)</item>
+        <item>Metro cúbico (m³)</item>
+    </string-array>
+
 </resources>

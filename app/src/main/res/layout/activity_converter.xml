@@ -39,13 +39,14 @@
 
     <com.google.android.material.textfield.TextInputLayout
         android:id="@+id/til_weight"
-        android:layout_width="match_parent"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_margin="16dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
         app:hintEnabled="false"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/tv_result_converter">
+        app:layout_constraintTop_toBottomOf="@id/radioGroup">
 
         <com.google.android.material.textfield.TextInputEditText
             android:id="@+id/tie_weight"
@@ -54,10 +55,11 @@
             android:background="@drawable/custom_input"
             android:drawableStart="@drawable/ic_weight"
             android:drawablePadding="16dp"
-            android:textStyle="bold"
-            android:hint="Peso"
+            android:drawableTint="@color/input_text_icon_tint"
+            android:hint="Massa"
             android:inputType="numberDecimal"
-            android:textSize="20sp" />
+            android:textSize="20sp"
+            android:textStyle="bold" />
     </com.google.android.material.textfield.TextInputLayout>
 
     <TextView
@@ -66,106 +68,118 @@
         android:layout_height="wrap_content"
         android:layout_margin="16dp"
         android:text="Medida de entrada"
-        app:layout_constraintStart_toStartOf="@id/til_weight"
-        app:layout_constraintTop_toBottomOf="@id/til_weight" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/til_weight"
+        android:visibility="gone"/>
 
     <TextView
-        android:id="@+id/tv_weight_exit"
+        android:id="@+id/tv_weight_output"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_margin="16dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="16dp"
         android:text="Medida de saída"
-        app:layout_constraintEnd_toEndOf="@id/til_weight"
-        app:layout_constraintStart_toEndOf="@id/tv_weight_input"
-        app:layout_constraintTop_toBottomOf="@id/til_weight" />
+        app:layout_constraintStart_toStartOf="@+id/guideline"
+        app:layout_constraintTop_toBottomOf="@id/til_weight"
+        android:visibility="gone"/>
 
     <Spinner
         android:id="@+id/spinner_weight_input"
-        android:layout_width="wrap_content"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="8dp"
-        app:layout_constraintStart_toStartOf="@id/tv_weight_input"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="10dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/guideline"
         app:layout_constraintTop_toBottomOf="@id/tv_weight_input" />
 
     <Spinner
-        android:id="@+id/spinner_weight_exit"
-        android:layout_width="wrap_content"
+        android:id="@+id/spinner_weight_output"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="8dp"
-        app:layout_constraintStart_toStartOf="@id/tv_weight_exit"
-        app:layout_constraintTop_toBottomOf="@id/tv_weight_exit" />
+        android:layout_marginEnd="16dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@id/guideline"
+        app:layout_constraintTop_toBottomOf="@id/tv_weight_output" />
 
     <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/til_distance"
-        android:layout_width="match_parent"
+        android:id="@+id/til_length"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginStart="16dp"
-        android:layout_marginEnd="16dp"
-        android:layout_marginTop="8dp"
+        android:layout_margin="16dp"
         app:hintEnabled="false"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/spinner_weight_input">
 
         <com.google.android.material.textfield.TextInputEditText
-            android:id="@+id/tie_distance"
+            android:id="@+id/tie_length"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:background="@drawable/custom_input"
             android:drawableStart="@drawable/ic_length"
             android:drawablePadding="16dp"
-            android:textStyle="bold"
+            android:drawableTint="@color/input_text_icon_tint"
             android:hint="Comprimento"
             android:inputType="numberDecimal"
-            android:textSize="20sp" />
+            android:textSize="20sp"
+            android:textStyle="bold" />
     </com.google.android.material.textfield.TextInputLayout>
 
+
     <TextView
-        android:id="@+id/tv_distance_input"
+        android:id="@+id/tv_length_input"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_margin="16dp"
         android:text="Medida de entrada"
-        app:layout_constraintStart_toStartOf="@id/til_distance"
-        app:layout_constraintTop_toBottomOf="@id/til_distance" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/til_length"
+        android:visibility="gone"/>
 
     <TextView
-        android:id="@+id/tv_distance_exit"
+        android:id="@+id/tv_length_output"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_margin="16dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="16dp"
         android:text="Medida de saída"
-        app:layout_constraintEnd_toEndOf="@id/til_distance"
-        app:layout_constraintStart_toEndOf="@id/tv_distance_input"
-        app:layout_constraintTop_toBottomOf="@id/til_distance" />
+        app:layout_constraintStart_toStartOf="@+id/guideline"
+        app:layout_constraintTop_toBottomOf="@id/til_length"
+        android:visibility="gone"/>
 
     <Spinner
-        android:id="@+id/spinner_distance_input"
-        android:layout_width="wrap_content"
+        android:id="@+id/spinner_length_input"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="8dp"
-        app:layout_constraintStart_toStartOf="@id/tv_distance_input"
-        app:layout_constraintTop_toBottomOf="@id/tv_distance_input" />
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="10dp"
+        app:layout_constraintEnd_toStartOf="@+id/guideline"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tv_length_input" />
 
     <Spinner
-        android:id="@+id/spinner_distance_exit"
-        android:layout_width="wrap_content"
+        android:id="@+id/spinner_length_output"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="8dp"
-        app:layout_constraintStart_toStartOf="@id/tv_distance_exit"
-        app:layout_constraintTop_toBottomOf="@id/tv_distance_exit" />
+        android:layout_marginEnd="16dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@id/guideline"
+        app:layout_constraintTop_toBottomOf="@id/tv_length_output" />
 
     <com.google.android.material.textfield.TextInputLayout
         android:id="@+id/til_volume"
-        android:layout_width="match_parent"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginStart="16dp"
-        android:layout_marginEnd="16dp"
-        android:layout_marginTop="8dp"
+        android:layout_margin="16dp"
         app:hintEnabled="false"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/spinner_distance_input">
+        app:layout_constraintTop_toBottomOf="@id/spinner_length_input">
 
         <com.google.android.material.textfield.TextInputEditText
             android:id="@+id/tie_volume"
@@ -174,11 +188,48 @@
             android:background="@drawable/custom_input"
             android:drawableStart="@drawable/ic_liquid"
             android:drawablePadding="16dp"
-            android:textStyle="bold"
+            android:drawableTint="@color/input_text_icon_tint"
             android:hint="Volume"
             android:inputType="numberDecimal"
-            android:textSize="20sp" />
+            android:textSize="20sp"
+            android:textStyle="bold" />
     </com.google.android.material.textfield.TextInputLayout>
+
+    <RadioGroup
+        android:id="@+id/radioGroup"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="10dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_result_converter">
+
+        <RadioButton
+            android:id="@+id/rbWeight"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Massa" />
+
+        <RadioButton
+            android:id="@+id/rbLength"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Comprimento" />
+
+        <RadioButton
+            android:id="@+id/rbVolume"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Volume" />
+
+        <RadioButton
+            android:id="@+id/rbTemperature"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Temperatura" />
+
+    </RadioGroup>
 
     <TextView
         android:id="@+id/tv_volume_input"
@@ -186,42 +237,47 @@
         android:layout_height="wrap_content"
         android:layout_margin="16dp"
         android:text="Medida de entrada"
-        app:layout_constraintStart_toStartOf="@id/til_volume"
-        app:layout_constraintTop_toBottomOf="@id/til_volume" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/til_volume"
+        android:visibility="gone"/>
 
     <TextView
-        android:id="@+id/tv_volume_exit"
+        android:id="@+id/tv_volume_output"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_margin="16dp"
+        android:layout_marginStart="6dp"
+        android:layout_marginTop="16dp"
         android:text="Medida de saída"
-        app:layout_constraintEnd_toEndOf="@id/til_volume"
-        app:layout_constraintStart_toEndOf="@id/tv_volume_input"
-        app:layout_constraintTop_toBottomOf="@id/til_volume" />
+        app:layout_constraintStart_toStartOf="@+id/guideline"
+        app:layout_constraintTop_toBottomOf="@id/til_volume"
+        android:visibility="gone"/>
 
     <Spinner
         android:id="@+id/spinner_volume_input"
-        android:layout_width="wrap_content"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="8dp"
-        app:layout_constraintStart_toStartOf="@id/tv_volume_input"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="10dp"
+        app:layout_constraintEnd_toStartOf="@+id/guideline"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/tv_volume_input" />
 
     <Spinner
-        android:id="@+id/spinner_volume_exit"
-        android:layout_width="wrap_content"
+        android:id="@+id/spinner_volume_output"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="8dp"
-        app:layout_constraintStart_toStartOf="@id/tv_volume_exit"
-        app:layout_constraintTop_toBottomOf="@id/tv_volume_exit" />
+        android:layout_marginEnd="16dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@id/guideline"
+        app:layout_constraintTop_toBottomOf="@id/tv_volume_output" />
 
     <com.google.android.material.textfield.TextInputLayout
         android:id="@+id/til_temperature"
-        android:layout_width="match_parent"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginStart="16dp"
-        android:layout_marginEnd="16dp"
-        android:layout_marginTop="8dp"
+        android:layout_margin="16dp"
         app:hintEnabled="false"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -234,11 +290,13 @@
             android:background="@drawable/custom_input"
             android:drawableStart="@drawable/ic_temperature"
             android:drawablePadding="16dp"
-            android:textStyle="bold"
+            android:drawableTint="@color/input_text_icon_tint"
             android:hint="Temperatura"
             android:inputType="numberDecimal"
-            android:textSize="20sp" />
+            android:textSize="20sp"
+            android:textStyle="bold" />
     </com.google.android.material.textfield.TextInputLayout>
+
 
     <TextView
         android:id="@+id/tv_temperature_input"
@@ -246,34 +304,41 @@
         android:layout_height="wrap_content"
         android:layout_margin="16dp"
         android:text="Medida de entrada"
-        app:layout_constraintStart_toStartOf="@id/til_temperature"
-        app:layout_constraintTop_toBottomOf="@id/til_temperature" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/til_temperature"
+        android:visibility="gone"/>
 
     <TextView
-        android:id="@+id/tv_temperature_exit"
+        android:id="@+id/tv_temperature_output"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_margin="16dp"
+        android:layout_marginStart="6dp"
+        android:layout_marginTop="16dp"
         android:text="Medida de saída"
-        app:layout_constraintEnd_toEndOf="@id/til_temperature"
-        app:layout_constraintStart_toEndOf="@id/tv_temperature_input"
-        app:layout_constraintTop_toBottomOf="@id/til_temperature" />
+        app:layout_constraintStart_toStartOf="@+id/guideline"
+        app:layout_constraintTop_toBottomOf="@id/til_temperature"
+        android:visibility="gone"/>
 
     <Spinner
         android:id="@+id/spinner_temperature_input"
-        android:layout_width="wrap_content"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="8dp"
-        app:layout_constraintStart_toStartOf="@id/tv_temperature_input"
+        android:layout_marginStart="10dp"
+        android:layout_marginEnd="8dp"
+        app:layout_constraintEnd_toStartOf="@+id/guideline"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/tv_temperature_input" />
 
     <Spinner
-        android:id="@+id/spinner_temperature_exit"
-        android:layout_width="wrap_content"
+        android:id="@+id/spinner_temperature_output"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="8dp"
-        app:layout_constraintStart_toStartOf="@id/tv_temperature_exit"
-        app:layout_constraintTop_toBottomOf="@id/tv_temperature_exit" />
+        android:layout_marginEnd="16dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@id/guideline"
+        app:layout_constraintTop_toBottomOf="@id/tv_temperature_output" />
 
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/guideline"
@@ -283,7 +348,7 @@
         app:layout_constraintGuide_percent="0.5" />
 
     <Button
-        android:id="@+id/btn_new_calculate"
+        android:id="@+id/btn_refresh"
         style="@style/Widget.Material3.Button.OutlinedButton"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
